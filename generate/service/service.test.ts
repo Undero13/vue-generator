@@ -1,0 +1,1 @@
+import {{name}}Service from "./{{name}}.service.ts"
