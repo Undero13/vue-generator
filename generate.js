@@ -24,31 +24,31 @@ const files = [];
 if (args.what === "component" || args.what === "view") {
   files.push(
     {
-      content: renderString(getFile('./generate/component/component.component.html'), data),
+      content: renderString(getFile(__dirname + '/generate/component/component.component.html'), data),
       path: `${data.name}.${args.what}.html`
     }
   );
   files.push(
     {
-      content: renderString(getFile('./generate/component/component.component.ts'), data),
+      content: renderString(getFile(__dirname + '/generate/component/component.component.ts'), data),
       path: `${data.name}.${args.what}.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile('./generate/component/component.component.scss'), data),
+      content: renderString(getFile(__dirname + '/generate/component/component.component.scss'), data),
       path: `${data.name}.${args.what}.scss`
     }
   );
   files.push(
     {
-      content: renderString(getFile('./generate/component/component.component.vue'), data),
+      content: renderString(getFile( __dirname + '/generate/component/component.component.vue'), data),
       path: `${data.name}.${args.what}.vue`
     }
   );
   files.push(
     {
-      content: renderString(getFile('./generate/component/component.component.test.ts'), data),
+      content: renderString(getFile(__dirname + '/generate/component/component.component.test.ts'), data),
       path: `${data.name}.${args.what}.test.ts`
     }
   );
@@ -57,13 +57,13 @@ if (args.what === "component" || args.what === "view") {
 if (args.what === "service") {
   files.push(
     {
-      content: renderString(getFile('./generate/service/service.service.ts'), data),
+      content: renderString(getFile(__dirname + '/generate/service/service.service.ts'), data),
       path: `${data.name}.${args.what}.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile('./generate/service/service.test.ts'), data),
+      content: renderString(getFile(__dirname + '/generate/service/service.test.ts'), data),
       path: `${data.name}.test.ts`
     }
   );
