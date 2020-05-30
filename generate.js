@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { renderString, renderTemplateFile } = require('template-file');
 const fs = require('fs');
 const args = require('yargs').argv;
