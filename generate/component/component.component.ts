@@ -1,5 +1,5 @@
 import { defineComponent } from "@vue/runtime-dom";
 
 export default defineComponent({
-  name: "{{name}}"
-})
+  name: "{{name}}",
+});
