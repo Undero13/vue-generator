@@ -16,7 +16,8 @@ if (!args.what) {
 
 const name = path.parse(args.path).base;
 const data = {
-  name: name.charAt(0).toUpperCase() + name.slice(1)
+  name: name.charAt(0).toUpperCase() + name.slice(1),
+  what:args.what
 }
 
 const files = [];
@@ -25,31 +26,31 @@ if (args.what === "component" || args.what === "view") {
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/component/component.component.html'), data),
-      path: `${data.name}.${args.what}.html`
+      filename: `${data.name}.${args.what}.html`
     }
   );
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/component/component.component.ts'), data),
-      path: `${data.name}.${args.what}.ts`
+      filename: `${data.name}.${args.what}.ts`
     }
   );
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/component/component.component.scss'), data),
-      path: `${data.name}.${args.what}.scss`
+      filename: `${data.name}.${args.what}.scss`
     }
   );
   files.push(
     {
       content: renderString(getFile( __dirname + '/generate/component/component.component.vue'), data),
-      path: `${data.name}.${args.what}.vue`
+      filename: `${data.name}.${args.what}.vue`
     }
   );
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/component/component.component.test.ts'), data),
-      path: `${data.name}.${args.what}.test.ts`
+      filename: `${data.name}.${args.what}.test.ts`
     }
   );
 }
@@ -58,20 +59,20 @@ if (args.what === "service") {
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/service/service.service.ts'), data),
-      path: `${data.name}.${args.what}.ts`
+      filename: `${data.name}.${args.what}.ts`
     }
   );
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/service/service.test.ts'), data),
-      path: `${data.name}.test.ts`
+      filename: `${data.name}.test.ts`
     }
   );
 }
 
 files.forEach(file => {
   fs.mkdirSync(args.path, { recursive: true })
-  fs.writeFileSync(`${args.path}/${file.path}`, file.content)
+  fs.writeFileSync(`${args.path}/${file.filename}`, file.content)
 })
 
 function getFile(path) {
