@@ -74,13 +74,13 @@ if (args.what === "store") {
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/store/store.ts'), data),
-      filename: `${data.name}.ts`
+      filename: `store.ts`
     }
   );
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/store/store.test.ts'), data),
-      filename: `${data.name}.test.ts`
+      filename: `store.test.ts`
     }
   );
 }
