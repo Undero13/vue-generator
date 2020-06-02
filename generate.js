@@ -70,6 +70,21 @@ if (args.what === "service") {
   );
 }
 
+if (args.what === "store") {
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/store/store.ts'), data),
+      filename: `${data.name}.ts`
+    }
+  );
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/store/store.test.ts'), data),
+      filename: `${data.name}.test.ts`
+    }
+  );
+}
+
 files.forEach(file => {
   fs.mkdirSync(args.path, { recursive: true })
   fs.writeFileSync(`${args.path}/${file.filename}`, file.content)
