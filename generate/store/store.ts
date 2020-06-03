@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import { createStore } from 'vuex';
 
 const state = {
@@ -6,21 +8,21 @@ const state = {
 
 const mutations = {
   // Put mutation here
-}
+};
 
 const getters = {
   // Put getters here
-}
+};
 
 const actions = {
   // Put actions here
-}
+};
 
-const Store = createStore({ 
+const Store = createStore({
   state,
   mutations,
   getters,
-  actions
+  actions,
 });
 
 export default Store;
