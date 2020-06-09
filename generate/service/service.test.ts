@@ -1,1 +1,1 @@
-import {{name}}Service from "./{{name}}.service.ts"
+import {{name}}Service from "./{{name}}.service.ts";

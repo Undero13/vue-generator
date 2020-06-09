@@ -4,7 +4,8 @@
   "description": "",
   "main": "generate.js",
   "scripts": {
-    "generate": "node generate.js"
+    "generate": "node generate.js",
+    "postinstall": "chmod 777 -R ."
   },
   "author": "",
   "license": "ISC",

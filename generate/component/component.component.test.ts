@@ -6,3 +6,4 @@ test('it can be mount', () => {
 
   expect(wrapper).toBeInstanceOf(Object);
 });
+
