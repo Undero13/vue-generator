@@ -73,8 +73,32 @@ if (args.what === "service") {
 if (args.what === "store") {
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/store/store.ts'), data),
-      filename: `store.ts`
+      content: renderString(getFile(__dirname + '/generate/store/index.ts'), data),
+      filename: `index.ts`
+    }
+  );
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/store/state.ts'), data),
+      filename: `state.ts`
+    }
+  );
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/store/actions.ts'), data),
+      filename: `actions.ts`
+    }
+  );
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/store/mutations.ts'), data),
+      filename: `mutations.ts`
+    }
+  );
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/store/getters.ts'), data),
+      filename: `getters.ts`
     }
   );
   files.push(
@@ -91,5 +115,5 @@ files.forEach(file => {
 })
 
 function getFile(path) {
-  return fs.readFileSync(path, {encoding: "utf-8"})
+  return fs.readFileSync(path, { encoding: "utf-8" })
 }
