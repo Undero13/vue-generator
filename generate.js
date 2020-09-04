@@ -49,7 +49,7 @@ if (args.what === "component" || args.what === "view") {
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/component/component.component.test.ts'), data),
+      content: renderString(getFile(__dirname + '/generate/component/component.component.spec.ts'), data),
       filename: `${data.path}.${args.what}.test.ts`
     }
   );
@@ -64,7 +64,7 @@ if (args.what === "service") {
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/service/service.test.ts'), data),
+      content: renderString(getFile(__dirname + '/generate/service/service.spec.ts'), data),
       filename: `${data.path}.test.ts`
     }
   );
@@ -103,8 +103,32 @@ if (args.what === "store") {
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/store/store.test.ts'), data),
+      content: renderString(getFile(__dirname + '/generate/store/store.spec.ts'), data),
       filename: `store.test.ts`
+    }
+  );
+}
+
+if (args.what === "directive") {
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/directive/directive.directive.ts'), data),
+      filename: `${data.path}.directive.ts`
+    }
+  );
+}
+
+if (args.what === "filter") {
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/filter/filter.filter.ts'), data),
+      filename: `${data.path}.filter.ts`
+    }
+  );
+  files.push(
+    {
+      content: renderString(getFile(__dirname + '/generate/filter/filter.filter.spec.ts'), data),
+      filename: `${data.path}.filter.spec.ts`
     }
   );
 }
