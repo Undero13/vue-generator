@@ -16,41 +16,41 @@ if (!args.what) {
 
 const name = path.parse(args.path).base;
 const data = {
-  name: name.charAt(0).toUpperCase() + name.slice(1),
-  what:args.what
+  name: name,
+  path: name,
+  what: args.what,
+  whatBig: args.what.charAt(0).toUpperCase() + args.what.slice(1)
 }
+
+const nameParts =  data.name.split('-')
+data.name = nameParts.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("")
+
 
 const files = [];
 
 if (args.what === "component" || args.what === "view") {
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/component/component.component.html'), data),
-      filename: `${data.name}.${args.what}.html`
-    }
-  );
-  files.push(
-    {
       content: renderString(getFile(__dirname + '/generate/component/component.component.ts'), data),
-      filename: `${data.name}.${args.what}.ts`
+      filename: `${data.path}.${args.what}.ts`
     }
   );
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/component/component.component.scss'), data),
-      filename: `${data.name}.${args.what}.scss`
+      filename: `${data.path}.${args.what}.scss`
     }
   );
   files.push(
     {
       content: renderString(getFile( __dirname + '/generate/component/component.component.vue'), data),
-      filename: `${data.name}.${args.what}.vue`
+      filename: `${data.path}.${args.what}.vue`
     }
   );
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/component/component.component.test.ts'), data),
-      filename: `${data.name}.${args.what}.test.ts`
+      filename: `${data.path}.${args.what}.test.ts`
     }
   );
 }
@@ -59,13 +59,13 @@ if (args.what === "service") {
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/service/service.service.ts'), data),
-      filename: `${data.name}.${args.what}.ts`
+      filename: `${data.path}.${args.what}.ts`
     }
   );
   files.push(
     {
       content: renderString(getFile(__dirname + '/generate/service/service.test.ts'), data),
-      filename: `${data.name}.test.ts`
+      filename: `${data.path}.test.ts`
     }
   );
 }

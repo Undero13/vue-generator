@@ -1,3 +1,3 @@
-export default class {{name}} {
+export default class {{name}}{{whatBig}} {
   
 }

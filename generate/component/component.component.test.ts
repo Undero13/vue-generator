@@ -1,9 +1,10 @@
 import { shallowMount } from '@vue/test-utils';
-import {{ name }} from './{{name}}.{{what}}.vue';
+import {{ name }}{{whatBig}} from './{{path}}.{{what}}.vue';
 
-test('it can be mount', () => {
-  const wrapper = shallowMount({{name}});
-
-  expect(wrapper).toBeInstanceOf(Object);
+describe("{{name}}{{whatBig}}", () => {
+  it("your name", () => {
+    const wrapper = shallowMount({{name}}{{whatBig}}, {
+    });
+    expect(wrapper.text()).something
+  });
 });
-

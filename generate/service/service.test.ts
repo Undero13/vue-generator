@@ -1,1 +1,7 @@
-import {{name}}Service from "./{{name}}.service.ts";
+import {{name}}{{whatBig}} from "./{{path}}.service.ts";
+
+describe("{{name}}{{whatBig}}", () => {
+  it("your name", () => {
+    
+  });
+});

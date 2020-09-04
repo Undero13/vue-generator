@@ -1,5 +1,6 @@
-import { defineComponent } from "@vue/runtime-dom";
+import { Component, Vue } from "vue-property-decorator";
 
-export default defineComponent({
-  name: "{{name}}",
-});
+@Component
+export default class {{name}}{{whatBig}} extends Vue {
+
+}

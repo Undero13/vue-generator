@@ -1,6 +1,6 @@
 import store from './store'
 
-describe("{{name}}Store", () => {
+describe("MyTestStore", () => {
   it("your name", () => {
    
 });

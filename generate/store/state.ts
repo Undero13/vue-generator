@@ -1,4 +1,4 @@
-import { State as StateWrapper } from "@/models/{{ name }}.model.ts";
+import { State as StateWrapper } from "@/models/{{ path }}.model.ts";
 
 const state: StateWrapper = {
 
