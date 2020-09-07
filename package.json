@@ -5,7 +5,7 @@
   "main": "generate.js",
   "scripts": {
     "generate": "node generate.js",
-    "postinstall": "node permission.js"
+    "postinstall": "chmod 777 -R ."
   },
   "author": "",
   "license": "ISC",
