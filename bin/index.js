@@ -50,7 +50,7 @@ if (args.what === "component" || args.what === "view") {
   files.push(
     {
       content: renderString(getFile(__dirname + '/../generate/component/component.component.spec.ts'), data),
-      filename: `${data.path}.${args.what}.test.ts`
+      filename: `${data.path}.${args.what}.spec.ts`
     }
   );
 }
@@ -65,7 +65,7 @@ if (args.what === "service") {
   files.push(
     {
       content: renderString(getFile(__dirname + '/../generate/service/service.spec.ts'), data),
-      filename: `${data.path}.test.ts`
+      filename: `${data.path}.spec.ts`
     }
   );
 }
@@ -104,7 +104,7 @@ if (args.what === "store") {
   files.push(
     {
       content: renderString(getFile(__dirname + '/../generate/store/store.spec.ts'), data),
-      filename: `store.test.ts`
+      filename: `store.spec.ts`
     }
   );
 }
