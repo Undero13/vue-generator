@@ -2,7 +2,7 @@
   "name": "vue-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "generate.js",
+  "main": "bin/index.js",
   "scripts": {
     "generate": "node generate.js",
     "postinstall": "chmod 777 -R ."
@@ -12,5 +12,8 @@
   "dependencies": {
     "template-file": "^3.1.0",
     "yargs": "^15.3.1"
+  },
+  "bin": {
+    "vue-generate": "./bin/index.js"
   }
 }
