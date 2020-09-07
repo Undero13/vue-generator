@@ -31,25 +31,25 @@ const files = [];
 if (args.what === "component" || args.what === "view") {
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/component/component.component.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/component/component.component.ts'), data),
       filename: `${data.path}.${args.what}.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/component/component.component.scss'), data),
+      content: renderString(getFile(__dirname + '/../generate/component/component.component.scss'), data),
       filename: `${data.path}.${args.what}.scss`
     }
   );
   files.push(
     {
-      content: renderString(getFile( __dirname + '/generate/component/component.component.vue'), data),
+      content: renderString(getFile( __dirname + '/../generate/component/component.component.vue'), data),
       filename: `${data.path}.${args.what}.vue`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/component/component.component.spec.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/component/component.component.spec.ts'), data),
       filename: `${data.path}.${args.what}.test.ts`
     }
   );
@@ -58,13 +58,13 @@ if (args.what === "component" || args.what === "view") {
 if (args.what === "service") {
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/service/service.service.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/service/service.service.ts'), data),
       filename: `${data.path}.${args.what}.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/service/service.spec.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/service/service.spec.ts'), data),
       filename: `${data.path}.test.ts`
     }
   );
@@ -73,37 +73,37 @@ if (args.what === "service") {
 if (args.what === "store") {
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/store/index.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/store/index.ts'), data),
       filename: `index.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/store/state.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/store/state.ts'), data),
       filename: `state.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/store/actions.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/store/actions.ts'), data),
       filename: `actions.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/store/mutations.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/store/mutations.ts'), data),
       filename: `mutations.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/store/getters.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/store/getters.ts'), data),
       filename: `getters.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/store/store.spec.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/store/store.spec.ts'), data),
       filename: `store.test.ts`
     }
   );
@@ -112,7 +112,7 @@ if (args.what === "store") {
 if (args.what === "directive") {
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/directive/directive.directive.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/directive/directive.directive.ts'), data),
       filename: `${data.path}.directive.ts`
     }
   );
@@ -121,13 +121,13 @@ if (args.what === "directive") {
 if (args.what === "filter") {
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/filter/filter.filter.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/filter/filter.filter.ts'), data),
       filename: `${data.path}.filter.ts`
     }
   );
   files.push(
     {
-      content: renderString(getFile(__dirname + '/generate/filter/filter.filter.spec.ts'), data),
+      content: renderString(getFile(__dirname + '/../generate/filter/filter.filter.spec.ts'), data),
       filename: `${data.path}.filter.spec.ts`
     }
   );
